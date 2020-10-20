@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { IdProviderContext } from "../contexts/IdProviderContext";
 import { DetailContext } from "../contexts/DetailProvider";
-// import SubNavBar from "../components/SubNavBar";
+import SubNavBar from "../components/SubNavBar";
 
 import "../style/Style.css";
 import "../style/Card.css";
@@ -19,7 +19,7 @@ const Detail = () => {
 
   return (
     <div className="mainCont">
-      {/* <SubNavBar /> */}
+      <SubNavBar />
       <br />
       <h1 style={{ textAlign: "center" }}>{main.name}</h1>
       <div className="details">
