@@ -26,10 +26,6 @@ body {
   border-radius: 3px;
 }
 
-img {
-  max-width: 100%;
-}
-
 h1 {
   padding-top: 60px;
 }
@@ -53,10 +49,17 @@ header {
 
 .details {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picbox {
+  width: 700px;
+  height: 900px;
 }
 
 .search-form {
-  padding-top: 13%;
+  padding-top: 10%;
 }
 
 .main-nav {
@@ -82,7 +85,6 @@ header {
 
 .sub-nav {
   grid-area: sb;
-  padding-top: 13%;
 }
 
 .sub-nav a {
@@ -117,6 +119,11 @@ header {
   -ms-transform: scale(1.4);
   -webkit-transform: scale(1.4);
   transform: scale(1.4);
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 .box img {

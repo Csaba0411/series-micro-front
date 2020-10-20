@@ -20,11 +20,10 @@ const Detail = () => {
   return (
     <div className="mainCont">
       <SubNavBar />
-      <br />
-      <h1 style={{ textAlign: "center" }}>{main.name}</h1>
+    
       <div className="details">
-        <div>
-          <img alt={main.name} src={pic.medium} />
+        <div className="picbox">
+          <img alt={main.name} src={pic.original} />
         </div>
         </div>
     </div>
