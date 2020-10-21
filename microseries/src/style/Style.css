@@ -12,6 +12,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   background-color: var(--primary);
+  display: grid;
   color: var(--light);
   font-family: "Roboto";
   box-sizing: border-box;
