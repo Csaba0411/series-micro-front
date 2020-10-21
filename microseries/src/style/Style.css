@@ -7,6 +7,35 @@
   --dark: #686868;
 }
 
+.btn {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 0.6em;
+  color: red;
+  cursor: pointer;
+
+  align-self: center;
+  font-size: 0.2;
+  font-weight: 40;
+  line-height: 1;
+
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.btn:hover {
+  color: #fff;
+  outline: 0;
+  box-shadow: 0 0 40px 40px red inset;
+}
+
 html,
 body {
   width: 100vw;

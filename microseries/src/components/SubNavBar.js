@@ -1,7 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { IdProviderContext } from "../contexts/IdProviderContext";
 import { DetailContext } from "../contexts/DetailProvider";
 import { Link } from "react-router-dom";
+import ModalVideo from "react-modal-video";
+import "react-modal-video/scss/modal-video.scss";
+import "../style/Style.css";
 
 const SubNavBar = () => {
   const { showId } = useContext(IdProviderContext);
@@ -9,12 +12,15 @@ const SubNavBar = () => {
     fetchSeriesById,
     fetchEpisodesById,
     fetchStaffById,
+    trailer
   } = useContext(DetailContext);
   // delegate these fetch calls to Context level and export functions
-
+  const [isOpen, setOpen] = useState(false);
   return (
     <div>
+      
       <nav className="sub-nav">
+      
         <Link
           onClick={() => fetchSeriesById(showId)}
           key={showId + "main"}
@@ -38,6 +44,19 @@ const SubNavBar = () => {
         >
           Staff
         </Link>{" "}
+        <React.Fragment>
+        <ModalVideo
+          channel="youtube"
+          autoplay
+          isOpen={isOpen}
+          videoId={trailer}
+          onClose={() => setOpen(false)}
+        />
+
+        <button className="btn" onClick={() => setOpen(true)}>
+          Trailer
+        </button>
+      </React.Fragment>
       </nav>
     </div>
   );
