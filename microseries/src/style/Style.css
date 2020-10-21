@@ -63,7 +63,8 @@ header {
 }
 
 .main-nav {
-  display: inline-flex;
+  display: sticky;
+  top: 0;
   white-space: nowrap;
 }
 
@@ -84,13 +85,13 @@ header {
 }
 
 .sub-nav {
-  grid-area: sb;
+  margin-top: 5%;
 }
 
 .sub-nav a {
   color: var(--light);
   text-decoration: none;
-  margin: 5px;
+  margin: 25px;
 }
 
 .sub-nav a:hover {

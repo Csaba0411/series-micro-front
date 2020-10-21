@@ -1,34 +1,31 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
+import "./App.css";
 import Shows from "./components/Shows";
-import { DetailProvider } from './contexts/DetailProvider';
-import { IdProvider} from './contexts/IdProviderContext';
+import { DetailProvider } from "./contexts/DetailProvider";
+import { IdProvider } from "./contexts/IdProviderContext";
 import Detail from "./pages/Detail";
 import Episodes from "./pages/Episodes";
 import Staff from "./pages/Staff";
-
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <IdProvider>
       <DetailProvider>
-      <Router>
-        <div className="App">
-        
+        <Router>
+          <NavBar />
+          <div className="App">
             <div className="container">
-            <Route exact path="/shows/:id/staff" component={Staff} />
+              <Route exact path="/shows/:id/staff" component={Staff} />
               <Route exact path="/shows/:id/episodes" component={Episodes} />
               <Route exact path="/shows/:id" component={Detail} />
               <Route exact path="/" component={Shows} />
             </div>
-      
-        </div>
-      </Router>
+          </div>
+        </Router>
       </DetailProvider>
-      </IdProvider>
-    
-    
+    </IdProvider>
   );
 }
 
