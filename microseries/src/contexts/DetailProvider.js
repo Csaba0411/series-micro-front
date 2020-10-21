@@ -10,6 +10,8 @@ export function DetailProvider(props) {
   const [main, setMain] = useState([]);
   const [episodes, setEpisodes] = useState([]);
   const [cast, setCast] = useState([]);
+  const [showName, setshowName] = useState([]);
+  const [trailer, setTrailer] = useState([]);
   
     function fetchSeriesById() {
     fetchSeriesByIdApi(showId).then((data) => setMain(data.data));
@@ -32,8 +34,11 @@ export function DetailProvider(props) {
         episodes,
         fetchEpisodesById,
         cast,
-        fetchStaffById
-
+        fetchStaffById,
+        showName,
+        setshowName,
+        trailer,
+        setTrailer
         }}
     >
       {props.children}
